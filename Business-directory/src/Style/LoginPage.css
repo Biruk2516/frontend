@@ -1,0 +1,81 @@
+.login-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+  }
+  .login-page form {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-page input {
+    margin: 15px 6px;
+    padding: 15px;
+    border: 2px solid orange;
+    background-color: rgb(200, 176, 133);
+    border-radius: 10px;
+    font-size: 16px;
+    outline: orange;
+    width: 400px;
+  }
+.pass-input {
+  min-width: 500px;
+}
+  .login-page input:hover {
+    border: 3px solid orange;
+    transition: 0.1s ease;
+  }
+  .login-page .button {
+    background-color: rgb(249, 117, 17);
+    margin: auto;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    padding: 10px;
+    border: 2px solid rgb(247, 100, 8);
+    border-radius: 15px;
+  }
+.visible-button {
+  max-width: 10px;
+  margin-left: -50px;
+}
+  .login-page .button:hover {
+    background-color: orange;
+  }
+.login-page button {
+  margin-left: -100px;
+}
+  .login-page p {
+    text-align: left;
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 10px 0px;
+  }
+
+  .login-page pre {
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 10px 0px;
+  }
+
+  .login-page h2 {
+    color: rgb(0, 0, 113);
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  img {
+  float: left;
+  max-width: 200px;
+  max-height: 100px;
+  border-radius: 40px;
+  margin: 5px;
+  }
+
+  img:hover {
+    cursor: pointer;
+    border: 1px solid rgb(231, 115, 0);
+    box-shadow: 0 2px 5px rgb(231, 115, 0);
+  }

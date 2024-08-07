@@ -18,33 +18,34 @@ import EmailIcon from '@mui/icons-material/Email';
 import businesses from './businesses';
 import SearchIcon from '@mui/icons-material/Search';
 import AllNavs from './NavBar/AllNavs';
-
+import AllBusinesses from './AllBusinesses';
+import DisplayAll from './DisplayAll';
 export const UserContext=createContext();
 
 function LandingPage() {
+  const [busy,setBusy] = useState(false);
 
-  const isClicked = true;
-  return isClicked ? (
+  return (
 
     <div className='landing'>
       <header>
         <img src={eTech} alt="" />
         <Link className='sign-button' to="/signup">Sign Up</Link>
-      <Link className='log-button' to="/login">Log In</Link>
-      <h2>Discover Local businesses and services at your fingertips</h2>
-      <p>Explore More....</p>
-      
-      <div className='search-inputs'>
-        <input type="text" placeholder='Search Businesses '/>
-        <button><SearchIcon /></button>
+        <Link className='log-button' to="/login">Log In</Link>
+         <h2>Discover Local businesses and services at your fingertips</h2>
+         <p>Explore More....</p>
+        
+        <div className='search-inputs'>
+          <input type="text" placeholder='Search Businesses '/>
+          <button className='search-icon'><SearchIcon /></button>
         </div>
       
       </header>
-    <div className='marquee'><marquee behavior="" direction="left">Advertisment here..</marquee></div>
+    <div className='marquee'><marquee behavior="" direction="left"><img style={{maxHeight:'40px'}} src="/eTech.png" alt="" />Advertisment here...</marquee></div>
 
       <div className='main-content'>
         <div className='navigations'>
-              <AllNavs  />
+              <AllNavs openBusy={() => setBusy(true)} />
         </div>
         <div className='elements'>
           <p><RestaurantIcon /> restaurant  </p>
@@ -53,7 +54,12 @@ function LandingPage() {
           <p><AddShoppingCartIcon /> Shopping</p>
           <p><LocalHospitalIcon /> Hospital</p>
           <p><LocalPharmacyIcon /> Pharmacy</p>
-          <p><MoreVertIcon /> More...</p>
+          <p><MoreVertIcon /></p>
+          {/* <select defaultValue={'More'+<MoreVertIcon />}>
+          <option value={<FacebookIcon />}>BookStore</option>
+          <option value={<FacebookIcon />}>Library</option>
+          <option value={<FacebookIcon />}>MoveStore</option>
+          </select> */}
         </div>
         <div className='businesses'>
         <BusinessList businesses={businesses} />
@@ -68,7 +74,7 @@ function LandingPage() {
         <p>&copy; &nbsp;eTech  {new Date().getFullYear()}</p>
       </footer>
     </div>
-  ): null;
+  );
 };
 
 export default LandingPage; 

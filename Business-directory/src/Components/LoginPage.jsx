@@ -3,28 +3,32 @@ import '../Style/LoginPage.css'
 import { Link } from 'react-router-dom';
 import eTech from '/eTech.png'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import LandingPage from './LandingPage';
 
 const LoginPage = () => {
 
-  const [isClicked, setIsClicked] = useState(false);
-  function handleClick()
+  function changeLogo(e)
   {
-    setIsClicked(true);
+    e.target.value= <FacebookIcon />
   }
-
-   return isClicked ? <LandingPage /> : (
+  return  (
     <>
-    <img onClick={handleClick} src={eTech} alt="Home" title='Home' />
+    <Link to='/'>
+       <img src={eTech} alt="Home" title='Home' />
+    </Link>
+    
     <div className="login-page">
       <h2>Log In</h2>
-      <form>
-       <div></div> <p>Username</p><input type="text/email" placeholder="Username or E-mail" required />
-       <p>Password</p><input type="password" placeholder="Password" required />
+      <form onSubmit='#'>
+        <label htmlFor='email'>Username</label><input id='email' type="text/email" placeholder="Username or E-mail" required />
+        <label htmlFor='password'>Password</label><input id='password' type="password" placeholder="Password" required />
+         
         <button className='button' type="submit">Log In</button>
-        <pre>or</pre>
-        <pre>Create account    <Link to="/signup">Sign Up</Link></pre>
       </form>
+      <pre>Forget password!</pre>
+        or
+        <pre>Create account    <Link to="/signup">Sign Up</Link></pre>
     </div>
     </>
   );

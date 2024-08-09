@@ -5,4 +5,12 @@
 .icons {
     margin-top: auto;
     margin:3px 5px;
+    transition:0.3s ease ;
+}
+.icons:hover{
+    transform: scale(0.8);
+    cursor: pointer;
+}
+.rating {
+    margin-top: -5px;
 }

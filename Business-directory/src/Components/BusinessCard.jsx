@@ -1,12 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../Style/BusinessCard.css';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
-import FavoriteBorder from '@mui/icons-material/SaveRounded'
+import { Button, IconButton } from '@mui/material';
+import Rating from '@mui/material/Rating';
 
 const BusinessCard = ({ name, description, image, link }) => {
 
+  const [value, setValue] = useState(2);
+  function doSth()
+  {
+    console.log("Clicked");
+  }
   return (
     <div style={styles.card}>
       <img src={image} alt={name} style={styles.image} />
@@ -14,10 +20,18 @@ const BusinessCard = ({ name, description, image, link }) => {
       <p>{description}</p>
       <a href={link} target="_blank" rel="">Visit Website</a>
       <div className='comm-buttons'> 
-         <FavoriteBorderIcon className='icons' />
-          <CommentIcon className='icons'/> 
-          <ShareIcon className='icons'/> 
-          <FavoriteBorder  className='icons'/>
+        <IconButton title='Favorite'  onClick={doSth}><FavoriteBorderIcon className='icons' /></IconButton> 
+          <IconButton title='Comment'> <CommentIcon className='icons'/></IconButton>
+          <IconButton title='Share'> <ShareIcon className='icons'/> </IconButton>
+      </div>
+      <div className='rating'>
+      <Rating
+        name="simple-controlled"
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      />
       </div>
     </div>
   );
@@ -26,12 +40,13 @@ const BusinessCard = ({ name, description, image, link }) => {
 const styles = {
   card: {
     border: '1px solid #ddd',
+    boxShadow:'0 2px 5px #ec8f16',
     borderRadius: '8px',
     padding: '10px',
     textAlign: 'center',
     margin: '5px',
     width: '200px',
-    backgroundColor:'#ddd',
+    backgroundColor:'lightblue',
     textDecoration:'none'
   },
   image: {
@@ -39,7 +54,12 @@ const styles = {
     height: '100%',
     objectFit: 'cover',
     borderRadius: '6px',
-  },
+  }
+
+};
+export default BusinessCard;
+
+
   // card: {
   //   border: '1px solid #ddd',
   //   borderRadius: '8px',
@@ -56,6 +76,3 @@ const styles = {
   //   objectFit: 'cover',
   //   borderRadius: '8px',
   // },
-};
-
-export default BusinessCard;

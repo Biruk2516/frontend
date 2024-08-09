@@ -8,8 +8,11 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import BusinessList from './BusinessList';
+import BusinessList from '../Components/BusinessList';
 import eTech from '/eTech.png'
+import Book from '@mui/icons-material/BookTwoTone'
+import Cars from '@mui/icons-material/CarRepair'
+import GamesRoundes  from '@mui/icons-material/GamesRounded'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -18,18 +21,37 @@ import EmailIcon from '@mui/icons-material/Email';
 import businesses from './businesses';
 import SearchIcon from '@mui/icons-material/Search';
 import AllNavs from './NavBar/AllNavs';
-import AllBusinesses from './AllBusinesses';
-import DisplayAll from './DisplayAll';
+import AllBusinesses from '../Components/AllBusinesses';
+import DisplayAll from '../Components/DisplayAll';
+import PostBusiness from './Post/PostBusiness';
 export const UserContext=createContext();
 
 function LandingPage() {
-  const [busy,setBusy] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [newBusiness, setNewBusiness] = useState(false);
+  const [displayAll, setDisplayAll] = useState(false);
 
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setDisplayAll(true);
+  };
+
+  const filteredBusinesses = selectedCategory
+  ? businesses.filter(b => b.category === selectedCategory)
+  : businesses;
+
+
+  function handleTakeHome()
+  {
+    setDisplayAll(false);
+  }
   return (
 
     <div className='landing'>
       <header>
-        <img src={eTech} alt="" />
+        <Link to='/' >
+          <img src={eTech} alt="Home" title='Home' />
+        </Link>
         <Link className='sign-button' to="/signup">Sign Up</Link>
         <Link className='log-button' to="/login">Log In</Link>
          <h2>Discover Local businesses and services at your fingertips</h2>
@@ -41,28 +63,38 @@ function LandingPage() {
         </div>
       
       </header>
-    <div className='marquee'><marquee behavior="" direction="left"><img style={{maxHeight:'40px'}} src="/eTech.png" alt="" />Advertisment here...</marquee></div>
+      <div className='marquee'>
+        <marquee behavior="" direction="left"><img style={{maxHeight:'40px'}} src="/eTech.png" alt="" />Advertisment here...</marquee>
+      </div>
 
       <div className='main-content'>
-        <div className='navigations'>
-              <AllNavs openBusy={() => setBusy(true)} />
-        </div>
-        <div className='elements'>
-          <p><RestaurantIcon /> restaurant  </p>
-          <p><HomeIcon /> Real Estate</p>
-          <p><ComputerIcon /> Technology</p>
-          <p><AddShoppingCartIcon /> Shopping</p>
-          <p><LocalHospitalIcon /> Hospital</p>
-          <p><LocalPharmacyIcon /> Pharmacy</p>
-          <p><MoreVertIcon /></p>
+      <div className='elements'>
+      <p onClick={() => handleCategoryClick('restaurant')}><RestaurantIcon /> Restaurant</p>
+          <p onClick={() => handleCategoryClick('real-estate')}><HomeIcon /> Real Estate</p>
+          <p onClick={() => handleCategoryClick('technology')}><ComputerIcon /> Technology</p>
+          <p onClick={() => handleCategoryClick('markets')}><AddShoppingCartIcon /> Shopping</p>
+          <p onClick={() => handleCategoryClick('hospitals')}><LocalHospitalIcon /> Hospital</p>
+          <p onClick={() => handleCategoryClick('pharmacy')}><LocalPharmacyIcon /> Pharmacy</p>
+          <p onClick={() => handleCategoryClick('bookstore')}><Book /> BookStore</p>
+          <p onClick={() => handleCategoryClick('games')}><GamesRoundes /> Gaming</p>
+          <p onClick={() => handleCategoryClick('cars')}><Cars /> Car Repair</p>
+          <p><Book /> BookStore</p>
+          <p><GamesRoundes /> Gaming</p>
+          <p><Cars /> Car Repair</p>
+          <p onClick={() => handleCategoryClick('more')}><MoreVertIcon /></p>
           {/* <select defaultValue={'More'+<MoreVertIcon />}>
           <option value={<FacebookIcon />}>BookStore</option>
           <option value={<FacebookIcon />}>Library</option>
           <option value={<FacebookIcon />}>MoveStore</option>
           </select> */}
         </div>
+        <div className='navigations'>
+              <AllNavs onClick={handleTakeHome} className='navs' openDialog={() => setNewBusiness(true)} />
+        </div>
+        
+        <PostBusiness openIt={newBusiness} closeDialog={()=> setNewBusiness(false)} />
         <div className='businesses'>
-        <BusinessList businesses={businesses} />
+        <BusinessList business={ displayAll ? filteredBusinesses : AllBusinesses} />
         </div> 
       </div>
       <footer>

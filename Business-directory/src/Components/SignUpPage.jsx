@@ -1,13 +1,20 @@
-import React,{useState} from 'react';
+import React,{useRef, useState} from 'react';
 import '../Style/SignUpPage.css';
 import { Link } from 'react-router-dom';
 import eTech from '/eTech.png'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { Checkbox } from '@mui/material';
 
 
 const SignUpPage = () => {
 
-  
+  const checkRef=useRef(null);
+
+  function checkClicked(event)
+  {
+   const sth= checkRef.current.Checkbox.checkClicked;
+    sth ? console.log('clicked') : null;
+  }
 return  (
     <>
     <Link to='/'>
@@ -31,7 +38,11 @@ return  (
         <input id='password' type="password" placeholder='enter password' required />
         <label htmlFor='password'>Re-enter Password</label>
         <input id='password' type="password" placeholder='re-enter password' required />
-        <button className='signup-button' type="submit">Sign Up</button>
+        <div className='policy'>
+          <Checkbox>I agree with 'webName' <a href="#">Terms of service.</a><a href="#">Privacy Policy.</a></Checkbox>
+          <p>I agree with the <a href="#">Terms of service.</a> and <a href="#">Privacy Policy.</a></p>
+        </div>
+        <button onClick={checkClicked} className='signup-button' type="submit">Sign Up</button>
       </form>
       <pre>Already have an account? <Link to="/login">Log In</Link></pre> 
     </div>

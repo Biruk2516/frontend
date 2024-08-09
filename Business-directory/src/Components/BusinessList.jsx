@@ -1,16 +1,16 @@
 import React from 'react';
 import BusinessCard from './BusinessCard';
 
-const BusinessList = ({ businesses }) => {
+const BusinessList = ({ business }) => {
   return (
     <div style={styles.list}>
-      {businesses.map((business, index) => (
+      {business.map((b, index) => (
         <BusinessCard 
           key={index}
-          name={business.name}
-          description={business.description}
-          image={business.image}
-          link={business.link}
+          name={b.name}
+          description={b.description}
+          image={b.image}
+          link={b.link}
         />
       ))}
     </div>

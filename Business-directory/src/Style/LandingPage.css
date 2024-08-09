@@ -27,6 +27,7 @@ header img {
     width: 120px;
 }
 
+
 header h2 {
     font-size: 24px;
     margin: 5px 0;
@@ -83,7 +84,7 @@ header p {
     box-shadow: inset 0 0 5px black;
     bottom: 0;
 }
- input:focus {
+.search-inputs input:focus {
     box-shadow: 0 0 10px 1000px rgba(0, 0, 0,0.5);
     outline: none;
 }
@@ -100,24 +101,40 @@ header p {
     transform: scale(0.9);
     box-shadow: 0 2px 5px rgb(12, 1, 125);
 }
+
+.post-jobs{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navs {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+}
+
 .navigations {
-    margin-top: -20px;
+    margin-top: 19px;
     text-align: center;
     float: left;
-    width: 300px;
+    width: 320px;
     background-color: #ccc;
     border-radius: 10px;
-    text-shadow:0 2px 5px #bb5c0a;
+    text-shadow:0 2px 10px #ece4dc;
+    align-items: center;
+    box-shadow: 0 2px 5px rgb(10, 10, 113);
 }
 
 .navigations h3 {
-    padding: 15px;
+    padding: 12px;
     transition: background-color 0.3s ease;
+    width: 100%;
+    height: 50px;
+    margin: 4.5px;
 }
 .navigations h3:hover {
     border: 1px dashed rgb(234, 118, 2);
     border-radius: 10px;
-    background-color: rgb(10, 10, 113);
+    background-color: #1e2a38;
     color: white;
 }
 
@@ -136,19 +153,21 @@ header p {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
     margin:0 10px;
 }
 
 .elements p:hover {
-    background-color: #eaeaea;
+    background-color: #001263;
+    color: white;
 }
 
 .businesses {
     margin-top: 10px;
     margin-right: 25px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Footer Styles */
@@ -188,7 +207,8 @@ footer p {
 }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+
+   @media (max-width: 840px) {/*768 */
     header h2 {
       font-size: 20px;
     }
@@ -201,19 +221,18 @@ footer p {
     }
   
     .navigations {
-        width: 100%;
+        width: 50%;
     }
+
      .businesses {
-      flex: none;
-      width: 100%;
-      padding: 0;
+        width: 50%;
     }
     .elements {
         display: none;
     }
   }
   
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
     header img {
       width: 100px;
     }
@@ -233,7 +252,10 @@ footer p {
     .navigations{
         margin: 0;
     }
-  }
+    .elements p{
+        display: none;
+    }
+  } */
   /*   .search-inputs {
       flex-direction: column;
       align-items: center;

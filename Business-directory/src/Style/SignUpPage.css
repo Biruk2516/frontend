@@ -4,8 +4,9 @@ body {
 .signup-page {
     max-width: 600px;
     max-height: 500px;
-    margin-top: -30px;
+    margin:0;
     padding: 20px;
+    top: 0;
     text-align: center;
   }
   .signup-page form {
@@ -94,4 +95,15 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: -30px;
+}
+
+.policy{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
+.policy p{
+  position: absolute;
+  margin-left: 50px;
 }

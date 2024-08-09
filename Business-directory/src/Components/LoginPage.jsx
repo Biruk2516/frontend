@@ -2,16 +2,10 @@ import React, { useEffect, useState } from 'react';
 import '../Style/LoginPage.css'
 import { Link } from 'react-router-dom';
 import eTech from '/eTech.png'
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LandingPage from './LandingPage';
 
 const LoginPage = () => {
 
-  function changeLogo(e)
-  {
-    e.target.value= <FacebookIcon />
-  }
+
   return  (
     <>
     <Link to='/'>
@@ -26,7 +20,7 @@ const LoginPage = () => {
          
         <button className='button' type="submit">Log In</button>
       </form>
-      <pre>Forget password!</pre>
+      <pre>Forget password! <a href="#">help</a></pre>
         or
         <pre>Create account    <Link to="/signup">Sign Up</Link></pre>
     </div>

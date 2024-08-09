@@ -1,31 +1,30 @@
 import React from "react";
 import LandingPage from "../LandingPage";
+import { Box, Button, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-import BusinessCard from "../BusinessCard";
-import AllBusinesses from '../AllBusinesses.js'
-import { Button,Select,MenuItem } from "@mui/material";
-
 function AllNavs(props)
 {
 
-    function contactInfo()
-    {
-        return (
-            <div style={backgroundColor='red' }>holla</div>
-        )
-    }
- return (
-    <div className='menu'>
-        <h3>HOME</h3>
-        <h3>BUSINESSES</h3>
-        <h3>POST BUSINESS</h3>
-        <h3>CONTACTS</h3>  
-        <h3>SERVICES</h3>
-        <h3>ABOUT US</h3>
-        <h3>STH</h3>  
-        <h3>STH</h3>
-        <h3>STh US</h3>
-    </div>);
+    return (
+        <Box className={props.className}>
+            <Grid container direction='column'>
+                <Grid display='flex' item container xs={1} direction='column'>
+                    <Button disableFocusRipple disableElevation disableRipple disableTouchRipple><h3 onClick={props.onClick}>Home</h3></Button>
+                    <Button
+                        component={Link}
+                        to="/businesses"
+                    >
+                        <h3>Businesses</h3>
+                    </Button>
+                    <Button onClick={props.openDialog}><h3>Post Business</h3></Button>
+                    <Button><h3>Contacts</h3></Button>
+                    <Button><h3>Services</h3></Button>
+                    <Button><h3>About Us</h3></Button>
+                    <Button><h3>SETTINGS</h3></Button>
+            </Grid>
+        </Grid>
+        </Box>
+    );
 }
 
 export default AllNavs;

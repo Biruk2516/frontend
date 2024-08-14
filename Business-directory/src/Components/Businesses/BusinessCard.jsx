@@ -1,21 +1,22 @@
 import React,{useState} from 'react';
-import '../Style/BusinessCard.css';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 import { Button, IconButton } from '@mui/material';
 import Rating from '@mui/material/Rating';
+import Location from '@mui/icons-material/LocationOn';
+import '../ComponentStyles/BusinessCard.css';
 
 const BusinessCard = ({ name, description, image, link }) => {
 
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(Math.floor(Math.random())+2);
   function doSth()
   {
     console.log("Clicked");
   }
   return (
-    <div style={styles.card}>
-      <img src={image} alt={name} style={styles.image} />
+    <div className='card' style={styles.card}>
+      <img src={image} alt={name} className='card-image' style={styles.image}/>
       <h2>{name}</h2>
       <p>{description}</p>
       <a href={link} target="_blank" rel="">Visit Website</a>
@@ -23,16 +24,19 @@ const BusinessCard = ({ name, description, image, link }) => {
         <IconButton title='Favorite'  onClick={doSth}><FavoriteBorderIcon className='icons' /></IconButton> 
           <IconButton title='Comment'> <CommentIcon className='icons'/></IconButton>
           <IconButton title='Share'> <ShareIcon className='icons'/> </IconButton>
+          
       </div>
       <div className='rating'>
+        Rating
       <Rating
         name="simple-controlled"
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
-      />
+      /><IconButton title='location'><Location className='icons-location' /></IconButton>
       </div>
+      
     </div>
   );
 };
@@ -40,13 +44,13 @@ const BusinessCard = ({ name, description, image, link }) => {
 const styles = {
   card: {
     border: '1px solid #ddd',
-    boxShadow:'0 2px 5px #ec8f16',
+    boxShadow:'0 2px 5px hsl(195, 53%, 20%)',
     borderRadius: '8px',
     padding: '10px',
     textAlign: 'center',
-    margin: '5px',
-    width: '200px',
-    backgroundColor:'lightblue',
+    margin: '8px',
+    width: '270px',
+    backgroundColor:'hsl(195, 53%, 95%)',
     textDecoration:'none'
   },
   image: {
@@ -54,9 +58,11 @@ const styles = {
     height: '100%',
     objectFit: 'cover',
     borderRadius: '6px',
+    marginLeft:'30px',
+    boxShadow:'0 2px 5px hsl(195, 53%, 20%)',
   }
-
 };
+
 export default BusinessCard;
 
 

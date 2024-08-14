@@ -1,0 +1,24 @@
+footer {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    max-height: 10vh;
+    margin-top: -20px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #ccc;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 5px;
+}

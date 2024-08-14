@@ -209,6 +209,20 @@ const businesses = [
       image:tech3,
       link: 'https://www.computer.com',
       category:'technology'
+    },
+    {
+      name: 'Game Business 4',
+      description: 'The Best Game equipment sales place in Addis.',
+      image: game4,
+      link: 'https://www.game.com',
+      category:'games'
+    },
+    {
+      name: 'Hospital 1',
+      description: ' Medical treatment,sergeries and others...',
+      image:hospital1,
+      link: 'https://www.hospitals.com',
+      category:'hospitals'
     }
    
     

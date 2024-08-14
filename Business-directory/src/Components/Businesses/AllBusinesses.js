@@ -9,7 +9,7 @@ import market1 from '/market1.jpg';
 import market3 from '/market3.jpg';
 import realestate1 from '/realestate1.jpg'
 
-const AllBusinesses = [
+const Allbusinesses = [
   {
     name: 'Central Perk',
     description: 'Best coffee in town.',
@@ -59,20 +59,6 @@ const AllBusinesses = [
     category:'hospitals'
   },
   {
-    name:'Market 1',
-    description:'A great market place in the city',
-    image:market1,
-    link: 'https://www.computer.com',
-    category:'markets'
-  },
-  {
-    name:'Market 3',
-    description:'A great market place in the city',
-    image:market3,
-    link: 'https://www.computer.com',
-    category:'markets'
-  },
-  {
     name: 'Real Estate 1',
     description: 'Great real estates with appropriate prices...',
     image: realestate1,
@@ -83,4 +69,4 @@ const AllBusinesses = [
     // Add more businesses here
   ];
 
-  export default AllBusinesses;
+  export default Allbusinesses;

@@ -17,10 +17,9 @@ const PostBusinessPage = () => {
                     <img src={eTech} alt="Home" title='Home Page' />
                 </Link>
                 <h2>Post a new business for the world to see it ....</h2>
-                <p>Register your business here....</p>
+                <p>Post a New Business....</p>
             </header>
             <div className='main-content'>
-                <h1>Post a New Business</h1>
                     <PostForm1 />
                     <PostForm2 /> 
                 

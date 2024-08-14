@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
 import './styles/postform1.css'
 import { Box, Dialog, DialogActions, DialogContent, DialogTitle, FilledInput, Grid, IconButton, MenuItem, Select, Typography,Button } from "@mui/material";
+
 export default function PostForm1()
 {
     let businessGeneral = {
@@ -36,7 +37,75 @@ export default function PostForm1()
     }
     return(
         <form onSubmit={handleSubmit} className="general-form">
-                <div className="inputs">
+                 <Box>
+            <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        Name:
+                        <FilledInput placeholder="Owner Name *" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        Category:
+                        <Select disableUnderline variant="filled" defaultValue='Hospital *' fullWidth>
+                            <MenuItem value="Hospital">Hospital</MenuItem>
+                            <MenuItem value="Restaurant">Restaurant</MenuItem>
+                            <MenuItem value="Technology">Technology</MenuItem>
+                            <MenuItem value="RealState">Real State</MenuItem>
+                            <MenuItem value="Pharmacy">Pharmacy</MenuItem>
+                            <MenuItem value="Other">Other</MenuItem>
+                        </Select>
+                    </Grid>
+                    <Grid item xs={6}>
+                        Country:
+                    <ReactFlagsSelect
+                                selected={selected}
+                                onSelect={(code) => setSelected(code)}
+                                searchable
+                                placeholder='Select Country'
+                                searchPlaceholder='search countries'
+                            />
+                    </Grid>
+                    <Grid item xs={6}>
+                        City:
+                    <Select disableUnderline variant="filled" defaultValue='City *' fullWidth>
+                            <MenuItem value="City *">Hospital</MenuItem>
+                            <MenuItem value="Restaurant">Restaurant</MenuItem>
+                            <MenuItem value="Technology">Technology</MenuItem>
+                            <MenuItem value="RealState">Real State</MenuItem>
+                            <MenuItem value="Pharmacy">Pharmacy</MenuItem>
+                            <MenuItem value="Other">Other</MenuItem>
+                        </Select>
+                    </Grid>
+                    <Grid item xs={6}>
+                        Sub-City:
+                        <FilledInput placeholder="sub city" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        Street-Name:
+                        <FilledInput placeholder="street name" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        image url:
+                        <FilledInput placeholder="Image url *" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        website link:
+                        <FilledInput placeholder="website link" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        Description:
+                        <FilledInput placeholder="description" disableUnderline fullWidth />
+                    </Grid>
+                    
+                </Grid>
+            </Box>
+                </form>
+    );
+}
+
+/*
+/*  */
+ /*
+ <div className="inputs">
                         <label>Business Name:</label>
                         <input
                             name='name'
@@ -105,105 +174,5 @@ export default function PostForm1()
                         />
                     </div>
                     <button className="post-submit-button" type="submit">Submit</button>
-                </form>
-    );
-}
-
-/*
-/*  */
- /*
- <Box  fullWidth fullScreen m={4} display='flex' justifyContent='space-between' alignItems='center'>
-                <Grid container spacing={2}>
-                    <Grid item xs={6} >
-                        {/* <button onClick={handleFocus}>click</button> 
-                        <FilledInput  placeholder="Owner Name *" disableUnderline fullWidth required />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Select disableUnderline variant="filled"  defaultValue="Business Categories *" fullWidth>
-                            <MenuItem value='Business Categories *'>Business Categories *</MenuItem>
-                            <MenuItem value="Hospital">Hospital</MenuItem>
-                            <MenuItem value="Restaurant">Restaurant</MenuItem>
-                            <MenuItem value="Technology">Technology</MenuItem>
-                            <MenuItem value="RealState">Real State</MenuItem>
-                            <MenuItem value="Pharmacy">Pharmacy</MenuItem>
-                            <MenuItem value="Other">Other</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <FilledInput   placeholder="Business Title *" disableUnderline fullWidth required />
-                    </Grid>
-                    <Grid item xs={6}>
-                    <ReactFlagsSelect
-                                selected={selected}
-                                onSelect={(code) => setSelected(code)}
-                                searchable
-                                placeholder='Select Country'
-                                searchPlaceholder='search countries'
-                            />
-                    </Grid>
-                    <Grid item xs={6} >
-                        <FilledInput  placeholder="Something" disableUnderline fullWidth required />
-                    </Grid>
-                    <Grid item xs={3} >
-                    <Select disableUnderline variant="filled" defaultValue='City *'   fullWidth>
-                            <MenuItem value='City *'>City *</MenuItem>
-                            <MenuItem value="Addis Ababa">Addis Ababa</MenuItem>
-                            <MenuItem value="Hawassa">Hawassa</MenuItem>
-                            <MenuItem value="Gondar">Gondar</MenuItem>
-                            <MenuItem value="Bahirdar">Bahirdar</MenuItem>
-                            <MenuItem value="Dire Dawa">Dire Dawa</MenuItem>
-                            <MenuItem value="Mekelle">Mekelle</MenuItem>
-                            <MenuItem value="Other">Other</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item xs={3} >
-                    <Select disableUnderline variant="filled" defaultValue='City.2'   fullWidth>
-                            <MenuItem value='City.2'>City.2</MenuItem>
-                            <MenuItem value="Addis Ababa">Addis Ababa</MenuItem>
-                            <MenuItem value="Hawassa">Hawassa</MenuItem>
-                            <MenuItem value="Gondar">Gondar</MenuItem>
-                            <MenuItem value="Bahirdar">Bahirdar</MenuItem>
-                            <MenuItem value="Dire Dawa">Dire Dawa</MenuItem>
-                            <MenuItem value="Mekelle">Mekelle</MenuItem>
-                            <MenuItem value="Other">Other</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item xs={6} >
-                        <FilledInput   placeholder="Something" disableUnderline fullWidth required />
-                    </Grid>
-                    <Grid item xs={3} >
-                    <Select disableUnderline variant="filled" defaultValue='Sub City *'   fullWidth>
-                            <MenuItem value='Sub City *'>Sub City *</MenuItem>
-                            <MenuItem value="Bole">Bole</MenuItem>
-                            <MenuItem value="Yeka">Yeka</MenuItem>
-                            <MenuItem value="Lideta">Lideta</MenuItem>
-                            <MenuItem value="Akaki-Kaliti">Akaki-Kaliti</MenuItem>
-                            <MenuItem value="Kirkos">Kirkos</MenuItem>
-                            <MenuItem value="Arada">Arada</MenuItem>
-                            <MenuItem value="Other">Other</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item xs={3} >
-                    <Select disableUnderline variant="filled" defaultValue='Sub City.2'   fullWidth>
-                            <MenuItem value='Sub City.2'>Sub City.2</MenuItem>
-                            <MenuItem value="Yeka">Yeka</MenuItem>
-                            <MenuItem value="Arada">Arada</MenuItem>
-                            <MenuItem value="Lideta">Lideta</MenuItem>
-                            <MenuItem value="Akaki-Kaliti">Akaki-Kaliti</MenuItem>
-                            <MenuItem value="Bole">Bole</MenuItem>
-                            <MenuItem value="Kirkos">Kirkos</MenuItem>
-                            <MenuItem value="Other">Other</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item xs={6} >
-                        <FilledInput  placeholder="Something" disableUnderline fullWidth />
-                    </Grid>
-                    <Grid item xs={6} >
-                        <FilledInput  placeholder="Something" disableUnderline fullWidth />
-                    </Grid>
-                    <Grid item xs={12} >
-                        <FilledInput placeholder="Description *" disableUnderline fullWidth multiline rows={4} required />
-                    </Grid>
-                    </Grid>
-                </Box> 
+  
  */

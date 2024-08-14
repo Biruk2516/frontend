@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import './styles/postform2.css';
+import { Box, Dialog, DialogActions, DialogContent, DialogTitle, FilledInput, Grid, IconButton, MenuItem, Select, Typography,Button } from "@mui/material";
 
 
 export default function PostForm2()
@@ -80,7 +81,51 @@ export default function PostForm2()
 
     return (
         <form onSubmit={handleSubmit} className="specific-form">
-                    <div>
+            <Box>
+            <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Owner Name *" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Select disableUnderline variant="filled" defaultValue='Hospital *' fullWidth>
+                            <MenuItem value="Hospital">Hospital</MenuItem>
+                            <MenuItem value="Restaurant">Restaurant</MenuItem>
+                            <MenuItem value="Technology">Technology</MenuItem>
+                            <MenuItem value="RealState">Real State</MenuItem>
+                            <MenuItem value="Pharmacy">Pharmacy</MenuItem>
+                            <MenuItem value="Other">Other</MenuItem>
+                        </Select>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Business Title *" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Address *" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Something" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Something" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Something" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <FilledInput placeholder="Something" disableUnderline fullWidth />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <FilledInput placeholder="Description *" disableUnderline fullWidth multiline rows={4} />
+                    </Grid>
+                </Grid>
+            </Box>
+                    
+        </form>
+    );
+}
+
+/*
+<div>
                         <label>City:</label>
                         <input
                             name='city'
@@ -211,6 +256,4 @@ export default function PostForm2()
                         />
                     </div>
                     <button type="submit">Submit</button>
-                </form>
-    );
-}
+ */

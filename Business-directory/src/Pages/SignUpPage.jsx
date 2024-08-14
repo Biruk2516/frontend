@@ -13,11 +13,14 @@ const SignUpPage = () => {
     lName:'',
     userName:'',
     email:'',
-    password:''
+    password:'',
+    password2:''
   });
 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+  const [isCheckedMessage, setIsCheckedMessage] = useState('')
 
   function handleChange(event)
   {
@@ -28,6 +31,10 @@ const SignUpPage = () => {
   function handleSubmit(event)
   {
     event.preventDefault();
+    if (!isChecked) {
+      setIsCheckedMessage("You must agree to the terms of service and privacy policy to sign up.");
+      //return;
+    }
    const emailValidation = Validations.validateEmail(values.email);
    const passwordValidation = Validations.validatePassword(values.password);
    setEmailError(emailValidation);
@@ -41,11 +48,17 @@ const SignUpPage = () => {
         lName:'',
         userName:'',
         email:'',
-        password:''
+        password:'',
+        password2:''
       });
     }
+    setIsChecked(false);
   }
+
   const checkRef=useRef(null);
+  const handleCheckboxChange = () => {
+    setIsChecked(checkRef.current.checked);
+  };
 
 return  (
     <>
@@ -69,12 +82,12 @@ return  (
         <label htmlFor='password'>Password</label>
         <input name='password' value={values.password} id='password' type="password" placeholder='enter password' required onChange={handleChange} />
                {passwordError && <p style={{ color: "red"  ,fontSize:'0.7em'}}>{passwordError}</p>}
-        <label htmlFor='password'>Re-enter Password</label>
-        <input name='password' value={values.password} id='password' type="password" placeholder='re-enter password' required onChange={handleChange} />
+        <label htmlFor='password2'>Re-enter Password</label>
+        <input name='password2' value={values.password2} id='password2' type="password" placeholder='re-enter password' required onChange={handleChange} />
         <div className='policy'>
-          <Checkbox ref={checkRef}>I agree with 'webName' <a href="#">Terms of service.</a><a href="#">Privacy Policy.</a></Checkbox>
-          <p>I agree with the <a href="#">Terms of service.</a> and <a href="#">Privacy Policy.</a></p>
+          <input type='checkbox' ref={checkRef}  onChange={handleCheckboxChange} />I agree with 'webName'<a href="#">Terms of service.</a><a href="#">Privacy Policy.</a>
         </div>
+         <p style={{color:'red', fofntSize:'0.6em'}}>{isCheckedMessage}</p>
         <button className='signup-button' type="submit">Sign Up</button>
       </form>
       <pre>Already have an account? <Link to="/login">Log In</Link></pre> 

@@ -1,5 +1,6 @@
-import React,{useState,createContext} from 'react';
+import React,{useState,createContext,useEffect,useRef} from 'react';
 import '../Style/LandingPage.css';
+import eTech from '/eTech.png'
 import HomeIcon from '@mui/icons-material/Home';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import ComputerIcon from '@mui/icons-material/Computer';
@@ -14,13 +15,21 @@ import GamesRoundes  from '@mui/icons-material/GamesRounded'
 import businesses from '../Components/Businesses/businesses';
 import AllNavs from '../Components/NavBar/AllNavs';
 import AllBusinesses from '../Components/Businesses/AllBusinesses';
-import PostBusiness from '../Components/Post/PostBusiness';
 import Header from '../Components/Basics/Header';
 import Footer from '../Components/Basics/Footer';
+import BusinessDescription from '../Components/BusinessDescription';
 
+export const dialogOpen=createContext();
 function LandingPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [displayAll, setDisplayAll] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+  const clickRef=useRef(null);
+
+  function handleColor()
+  {
+    clickRef.current.style.backgroundColor='black';
+  }
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -37,18 +46,18 @@ function LandingPage() {
     setDisplayAll(false);
   }
 
-  function handleClick()
+  function handleClick(item)
   {
-    console.log("Clicked")
+     console.log('you clicked',item);
   }
   return (
 
     <div className='landing'>
       <Header />
       <div className='marquee'>
-        <marquee behavior="" direction="left"><img style={{maxHeight:'40px'}} src="/eTech.png" alt="" />Advertisment here...</marquee>
+        <marquee behavior="" direction="left"><img style={{maxHeight:'40px'}} src={eTech} alt="" />Advertisment here...</marquee>
       </div>
-
+      <BusinessDescription openIt={openDialog} closeIt={() => setOpenDialog(false)} />
       <div className='main-content'>
           <div className='elements'>
             <p onClick={() => handleCategoryClick('restaurant')}><RestaurantIcon /> Restaurant</p>
@@ -69,9 +78,13 @@ function LandingPage() {
           <div className='navigations'>
                 <AllNavs onClick={handleTakeHome} direction1='column' direction2='column' />
           </div>
-          <div className='businesses' onClick={handleClick}>
-          <BusinessList business={ displayAll ? filteredBusinesses : AllBusinesses} />
+          <div>
+            
+          </div>
+          <div className='businesses'>
+          <BusinessList   business={ displayAll ? filteredBusinesses : AllBusinesses} />
           </div> 
+          
       </div>
       <Footer />
     </div>

@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import eTech from '/eTech.png'
 import SearchIcon from '@mui/icons-material/Search';
 import '../ComponentStyles/header.css';
 export default function Header()
 {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = () => {
+    if(searchQuery.trim())
+    {
+      console.log('searching for \'',searchQuery,'\'');
+    }
+    setSearchQuery('');
+  }
+  function handleKeyPress(event)
+  {
+    if(event.key === 'Enter')
+    {
+      handleSearch();
+    }
+
+  }
     return (
         <header>
         <Link to='/' >
@@ -16,8 +33,8 @@ export default function Header()
          <p>Explore More....</p>
         
         <div className='search-inputs'>
-          <input type="text" placeholder='Search Businesses '/>
-          <button className='search-icon'><SearchIcon /></button>
+          <input className="search-input" value={searchQuery} id="searchInput" type="text" placeholder='Search Businesses ' onChange={(e)=>setSearchQuery(e.target.value)} onKeyDown={handleKeyPress} />
+          <button className='search-icon' onClick={handleSearch} id="searchButton"><SearchIcon /></button>
         </div>
       
       </header>

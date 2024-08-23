@@ -1,0 +1,116 @@
+/* General Form Styling */
+.main-post{
+    width: 98vw;
+    margin: 5px;
+}
+.to-home-page {
+    float: left;
+    margin: 10px;
+
+}
+.post-image{
+    float: right;
+    box-shadow: 0 2px 5px #0056b3;
+    margin-top: 50px;
+    margin-right: 10px;
+    width: 300px;
+    border-radius: 30px;
+    height:200px;
+}
+.general-form {
+    margin-left: 150px;
+    max-width: 1000px;
+    padding: 20px;
+    color: #f3830c;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.general-form .inputs {
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 120px;
+    box-shadow: 0 4px 8px #0056b3;
+    border-radius: 10px;
+    color: #f3830c;
+}
+.general-form .inputs input:focus,textarea:focus { 
+        background-color:antiquewhite;
+   
+}
+.general-form .inputs label{
+    color: #f3830c;
+}
+
+.general-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.general-form input[type="text"],
+.general-form textarea,
+.general-form .ReactFlagsSelect {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+
+}
+
+.general-form .cities{
+    width: 300px;
+}
+
+.sth div{
+    margin:0 9px;
+    
+}
+
+.general-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.general-form .ReactFlagsSelect {
+    padding: 0;
+}
+
+.general-form input[type="text"]:focus,
+.general-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.general-form button[type="submit"] {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.general-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+.post-footer a{
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1450px) {
+   .post-image{
+    display: none;
+   }
+}

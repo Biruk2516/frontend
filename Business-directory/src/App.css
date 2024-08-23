@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     display: flex;
-    justify-content: center; /* Centers items horizontally */
+    justify-content: center;  /*Centers items horizontally  */
     align-items: center;
     text-align: center;
 }

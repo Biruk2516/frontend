@@ -217,13 +217,13 @@ const businesses = [
       link: 'https://www.game.com',
       category:'games'
     },
-    {
-      name: 'Hospital 1',
-      description: ' Medical treatment,sergeries and others...',
-      image:hospital1,
-      link: 'https://www.hospitals.com',
-      category:'hospitals'
-    }
+    // {
+    //   name: 'Hospital 1',
+    //   description: ' Medical treatment,sergeries and others...',
+    //   image:hospital1,
+    //   link: 'https://www.hospitals.com',
+    //   category:'hospitals'
+    // }
    
     
     // Add more businesses here

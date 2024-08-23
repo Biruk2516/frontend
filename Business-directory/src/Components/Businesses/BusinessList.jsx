@@ -1,10 +1,13 @@
-import React from 'react';
+import React,{useState, createContext} from 'react';
 import BusinessCard from './BusinessCard';
+import '../ComponentStyles/Business.css';
 
-const BusinessList = ({ business }) => {
+const BusinessList = ({ business ,onClick}) => {
+
   return (
     <div style={styles.list}>
       {business.map((b, index) => (
+        <div key={index}> 
         <BusinessCard 
           key={index}
           name={b.name}
@@ -12,6 +15,7 @@ const BusinessList = ({ business }) => {
           image={b.image}
           link={b.link}
         />
+        </div>
       ))}
     </div>
   );
@@ -19,6 +23,7 @@ const BusinessList = ({ business }) => {
 
 const styles = {
   list: {
+    marginBottom:'5px',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',

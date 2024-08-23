@@ -1,77 +1,69 @@
 .login-page {
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
     padding: 15px;
     text-align: center;
   }
   .login-page form {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
   }
 
-  .eye-button {
-    position: absolute;
-    margin: 15px 6px;
-    padding: 10px;
-    background-color: rgb(200, 176, 133);
-    border: none;
-  }
-
-  .eye-button:focus{
-    border: none;
-  }
-
-  .login-page label {
-    float: left;
-  }
   .login-page input {
     margin: 15px 6px;
     padding: 15px;
     border: 2px solid orange;
-    background-color: rgb(200, 176, 133);
+    background-color: hsl(38, 16%, 75%);
     border-radius: 10px;
     font-size: 16px;
     outline: orange;
     width: 400px;
   }
-.pass-input {
-  min-width: 500px;
-}
+
+  .toggle-button:focus{
+    outline: none;
+    border: none;
+  }
   .login-page input:hover {
-    border: 3px solid orange;
+    border: 2.5px solid orange;
     transition: 0.1s ease;
   }
   .login-page .button {
-    background-color: rgb(249, 117, 17);
-    margin: auto;
+    background-color: orange;
+    margin: 5px;
     color: white;
     font-size: 1.1em;
     padding: 10px;
-    border: 2px solid rgb(247, 100, 8);
+    width: 100px;
+    box-shadow:  0 0 3px rgb(89, 89, 206);
     border-radius: 15px;
   }
-.visible-button {
-  max-width: 10px;
-  margin-left: -50px;
-}
+
   .login-page .button:hover {
-    background-color: orange;
+    background-color: hsl(39, 100%, 45%);
+    transition: 0.3s ease;
   }
-.login-page button {
-  margin-left: -100px;
+
+.login-options {
+  border: 2px solid whitesmoke;
+  margin: 5px;
+  align-items: center;
+  width: 400px;
 }
-  .login-page p {
-    text-align: left;
-    font-size: 1.3em;
-    margin: 0;
-    padding: 10px 0px;
-  }
+.login-options h3 a{
+  margin: 15px;
+  text-decoration: none;
+  color: black;
+}
 
   .login-page pre {
     font-size: 1.2em;
-    margin:0;
     padding: 10px 0px;
+    
   }
 
   .login-page h2 {
@@ -89,6 +81,6 @@
 
   img:hover {
     cursor: pointer;
-    border: 1px solid rgb(231, 115, 0);
-    box-shadow: 0 2px 5px rgb(231, 115, 0);
+    border: 1px solid rgb(0, 181, 231);
+    box-shadow: 0 2px 5px rgb(2, 132, 146);
   }

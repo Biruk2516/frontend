@@ -5,9 +5,8 @@ import computer from '/computer.jpg';
 import game1 from '/game1.jpg';
 import car1 from '/car1.jpg';
 import hospital1 from '/hospital1.jpg';
-import market1 from '/market1.jpg';
-import market3 from '/market3.jpg';
-import realestate1 from '/realestate1.jpg'
+import realestate1 from '/realestate1.jpg';
+import pharmacy3 from '/pharmacy3.jpg';
 
 const Allbusinesses = [
   {
@@ -26,7 +25,7 @@ const Allbusinesses = [
   },
   {
     name: 'Vehicle',
-    description: 'We are the best vehicle sales company in the town',
+    description: 'The best vehicle sales company in the town',
     image:car,
     link: 'https://greengrocer.com',
     category:'cars'
@@ -65,6 +64,14 @@ const Allbusinesses = [
     link: 'https://techhub.com',
     category:'real-estate'
   },
+  {
+    name: 'Pharmacy 3',
+    description: 'Medical drugs and clinic related equipments ...',
+    image: pharmacy3,
+    link: 'https://coffeecorner.com',
+    category:'pharmacy'
+  }
+  
     
     // Add more businesses here
   ];

@@ -3,7 +3,7 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    max-height: 10vh;
+    min-height: 10vh;
     margin-top: -20px;
 }
 

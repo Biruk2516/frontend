@@ -1,0 +1,85 @@
+.card {
+    background-color:hsl(195, 53%, 95%);
+    transition:0.3s ease ;
+
+}
+
+.card:hover{
+    background-color: hsl(195, 53%, 90%);
+}
+.card img:hover{
+    cursor: pointer;
+}
+.card h2:hover{
+    cursor: pointer;
+}
+.card h2,p,a{
+    margin-top: -5px;
+}
+
+.icons {
+    margin:8px 12px;
+    transition:0.3s ease ;
+    color: rgb(2, 6, 109);
+}
+.icons:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+}
+.icons-location{
+    margin:0px 10px;
+    transition:0.3s ease ;
+    float: right;
+    color: rgb(152, 0, 0);
+}
+
+.share-icons {
+    width: 70px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+.share-icons:hover{
+    transform: scale(1.2);
+}
+.share-icons:focus{
+    outline: none;
+    box-shadow: none; 
+}
+.icon-buttons:focus{
+    outline: none;
+    box-shadow: none;   
+}
+.businesses{
+    margin-bottom: 20px;
+}
+.all-business-navs{
+   float: left;
+   margin-left: 50px;
+   margin-top: 10px;
+   width: 150px;
+   height: 50px;
+}
+.all-business-navs p:hover{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+@media(max-width:840px)
+{
+    .display-footer{
+        display: none;
+    }
+}
+@media(max-width:720)
+{
+    .businesses{
+        width: 50%;
+    }
+    .advertisment{
+        display: none;
+    }
+}

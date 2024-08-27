@@ -1,0 +1,143 @@
+/* BusinessDetail.css */
+  
+  .main-container {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .details {
+    float: left;
+    width: 20vw;
+    margin-right: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details p {
+    font-size: 1rem;
+    color: #495057;
+    margin: 20px 0;
+  }
+  
+  .details hr {
+    border: none;
+    border-top: 1px solid #e9ecef;
+    margin: 10px 0;
+  }
+
+  .sth{
+    border: 1px solid black;
+  }
+  
+  .general {
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .general h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin: 40px;
+  }
+  
+  .general p {
+    font-size: 1.1rem;
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .general a {
+    display: inline-block;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .general a:hover {
+    color: #0056b3;
+  }
+  
+  .detail-image {
+    width: 500px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .images-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .images-container img {
+    width: calc(30% - 10px);
+  }
+  
+  .rating {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating pre {
+    margin: 0;
+    display: inline-block;
+  }
+  
+  .icon-button{
+    margin:10px 50px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #e9ecef;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .details, .general {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .images-container {
+      flex-direction: column;
+    }
+  
+    .images-container img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .rating {
+      font-size: 1rem;
+      justify-content: center;
+    }
+  }
+  

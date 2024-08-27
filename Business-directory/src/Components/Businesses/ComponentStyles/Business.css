@@ -8,6 +8,7 @@
     background-color: hsl(195, 53%, 90%);
 }
 .card img:hover{
+    
     cursor: pointer;
 }
 .card h2:hover{
@@ -63,10 +64,7 @@
    width: 150px;
    height: 50px;
 }
-.all-business-navs p:hover{
-    text-decoration: none;
-    text-decoration-line: none;
-}
+
 
 @media(max-width:840px)
 {

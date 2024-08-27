@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import eTech from '/eTech.png'
 import SearchIcon from '@mui/icons-material/Search';
-import '../ComponentStyles/header.css';
+import './basicStyles/header.css';
 export default function Header()
 {
   const [searchQuery, setSearchQuery] = useState('');

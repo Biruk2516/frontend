@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage';
 import SignUpPage from './Pages/SignUpPage';
@@ -10,6 +10,8 @@ import ProfilePage from './Pages/ProfilePage';
 import ServicePage from './Pages/ServicePage';
 import AboutUsPage from './Pages/AboutUsPage';
 import SettingPage from './Pages/SettingPage';
+import BusinessPage from './Components/Businesses/BusinessDetail';
+import BusinessDetail from './Components/Businesses/BusinessDetail';
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
           <Route path='/businesses' element = {<BusinessDisplay />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/business/:id" element={<BusinessDetail />} />
           <Route path='/profilePage' element={<ProfilePage />} />
           <Route path='/servicePage' element={<ServicePage />} />
           <Route path='/aboutUsPage' element={<AboutUsPage />} />

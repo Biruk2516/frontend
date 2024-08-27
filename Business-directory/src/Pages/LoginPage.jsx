@@ -44,19 +44,19 @@ const LoginPage = () => {
   }
 
   return  (
-    <>
+    <div className="login-page">
     <Link to='/'>
        <img src={eTech} alt="Home" title='Home Page' />
     </Link>
     
-    <div className="login-page">
+    
       <h2>Log In here</h2>
       <div className='login-options'>
         <h3><a href="https://www.facebook.com" target='_blank'><IconButton sx={{color:'rgb(24, 119, 242)'}}><Facebook  /></IconButton>&nbsp;continue with facebook</a></h3>
         <h3><a href="https://www.google.com" target='_blank'><IconButton sx={{color:'brown'}}><GoogleIcon /></IconButton>&nbsp;continue with google</a></h3>
       </div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='email'>Username</label>
+        <label htmlFor='email'>Email</label>
         <input name='email' value={values.email} 
                             id='email' type="email" placeholder="E-mail" onChange={handleChange} required />
                    {emailError && <p style={{ color: "red"  ,fontSize:'0.8em'}}>{emailError}</p>}
@@ -73,7 +73,7 @@ const LoginPage = () => {
         or
       <pre>Create account    <Link to="/signup">Sign Up</Link></pre>
     </div>
-    </>
+    
   );
 };
 

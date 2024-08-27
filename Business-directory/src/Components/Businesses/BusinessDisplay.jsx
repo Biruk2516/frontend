@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessList from "./BusinessList";
-import businesses from "./businesses";
+import businesses from "./business-data/businesses";
 import { Link } from "react-router-dom";
 import Header from "../Basics/Header";
 import eTech from '/eTech.png'
@@ -8,7 +8,7 @@ import grinch from '/Grinch.png'
 import emoji from '/emoji.jpg'
 import Footer from "../Basics/Footer";
 import HomeIcon from '@mui/icons-material/Home';
-import '../ComponentStyles/Business.css';
+import './ComponentStyles/Business.css';
 
 
 function BusinessDisplay()
@@ -22,7 +22,7 @@ function BusinessDisplay()
         <div className='business-display'>
           <Header />
           <div className='all-business-navs'>
-            <p><Link to='/'><HomeIcon /><p>Home</p></Link></p>
+            <Link className="link" to='/'><HomeIcon />Home</Link>
           </div>
           <h2>Here are a lot of businesses that you might be interested in  ......  take a look </h2>
           <div className="advertisment" style={{backgroundColor:'hsl(240, 84%, 24%)',height:"820px",float:'left',width:'250px',marginLeft:'10px',borderRadius:'5px'}}>

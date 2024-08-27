@@ -122,12 +122,12 @@ return  (
           <input name='password2' value={values.password2} id='password2' type={isPasswordVisible ? 'text': 'password'} placeholder='re-enter password' required onChange={handleChange} />
                   <p style={{color:'red', fontSize:'0.7em'}}>&nbsp;&nbsp;&nbsp;{passwordMatch}</p>
         <div className='policy'>
-          <input type='checkbox' ref={checkRef}  onChange={handleCheckboxChange} />&nbsp;&nbsp;By signing up, you agree to our <a href="#">Terms of service</a> and <a href="#">Privacy Policy.</a> You will be sent a single email to verify your account.
+          <input type='checkbox' ref={checkRef}  onChange={handleCheckboxChange} />&nbsp;&nbsp;By signing up, you agree to our <a href="#">Terms of service</a> and <a href="#">Privacy.</a> You will be sent a single email to verify your account.
         </div>
         <p style={{color:'red', fofntSize:'0.5em'}}>&nbsp;&nbsp;&nbsp;{isCheckedMessage}</p>
         <button  className='signup-button' type="submit">Sign Up</button>
       </form>
-      <pre>Already have an account? <Link to="/login">Log In</Link></pre> 
+      <pre>Already have an account? <Link to="/login">Log In</Link></pre>
     </div>
   </>
   );

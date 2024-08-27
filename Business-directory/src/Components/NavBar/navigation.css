@@ -1,0 +1,28 @@
+.navigations {
+    margin-top: 18px;
+    text-align: center;
+    float: left;
+    max-height: 820px;
+    overflow-y: auto;
+    width: 260px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    align-items: center;
+    box-shadow:  0 0 5px rgb(10, 10, 113);
+}
+.navigations h3 {
+    padding: 12px;
+    transition: 0.3s ease;
+    height: 50px;
+    margin: 12px 4px;
+}
+.link{
+    text-decoration: none;
+}
+
+.link:hover{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    transition: 0.2s ease;
+}

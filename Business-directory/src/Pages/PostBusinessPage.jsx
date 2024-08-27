@@ -10,7 +10,7 @@ import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
 import Book from '@mui/icons-material/BookTwoTone'
 import Cars from '@mui/icons-material/CarRepair'
 import GamesRoundes  from '@mui/icons-material/GamesRounded'
-import '../PageRelated/PostPage.css';
+import '../PageStyle/PostPage.css';
 import eTech from '/eTech.png';
 import businessUsers from '../user/businessUsers.js';
 import { Button } from "@mui/material";

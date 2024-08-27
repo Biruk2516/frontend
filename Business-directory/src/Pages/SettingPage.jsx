@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../PageRelated/SettingPage.css'
+import '../PageStyle/SettingPage.css'
 // Mock functions to handle saving settings
 const saveSettings = (settings) => {
   console.log('Settings saved:', settings);

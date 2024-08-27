@@ -1,8 +1,8 @@
-import React,{useState, createContext} from 'react';
-import BusinessCard from './BusinessCard';
-import '../ComponentStyles/Business.css';
+import React from 'react';
+import BusinessCard from './business-card/BusinessCard';
+import './ComponentStyles/Business.css'
 
-const BusinessList = ({ business ,onClick}) => {
+const BusinessList = ({ business }) => {
 
   return (
     <div style={styles.list}>
@@ -12,8 +12,9 @@ const BusinessList = ({ business ,onClick}) => {
           key={index}
           name={b.name}
           description={b.description}
-          image={b.image}
+          image={b.image1}
           link={b.link}
+          busines={b}
         />
         </div>
       ))}

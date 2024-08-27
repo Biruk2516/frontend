@@ -17,8 +17,16 @@ header p {
 }
 
 header img {
-    margin: 8px;
-}
+    float: left;
+    max-width: 200px;
+    max-height: 100px;
+    border-radius: 45px;
+    margin: 5px;
+    }
+header img:hover {
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgb(2, 132, 146);
+    }
 
 .sign-button, .log-button {
     display: flex;

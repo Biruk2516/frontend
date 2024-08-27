@@ -1,6 +1,5 @@
 import React from "react";
-import '../PageRelated/AboutUsPage.css'
-import Header from "../Components/Basics/Header";
+import '../PageStyle/AboutUsPage.css'
 import Footer from "../Components/Basics/Footer";
 import eTech from '/eTech.png';
 import emoji from '/emoji.jpg';

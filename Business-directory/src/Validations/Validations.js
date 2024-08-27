@@ -75,7 +75,7 @@ class Validations {
 
     //Validationg email inputs
     static  validateEmail(email) {
-      const checkReg = /^[a-zA-Z0-9]{5,}@[a-zA-Z]{4,}\.[a-zA-Z]{2,}$/;
+      const checkReg = /^[a-zA-Z0-9]{3,}@[a-zA-Z]{3,}\.[a-zA-Z]{2,}$/;
     
       if(!email){
         return 'email is required';
@@ -86,9 +86,9 @@ class Validations {
       
       const parts = email.split('@');
       
-      // if (parts[0].length < 5) {
-      //     return "The part before '@' should have at least 5 characters.";
-      // }
+      if (parts[0].length < 3) {
+          return "The part before '@' should have at least 3 characters.";
+      }
       
       if (!parts[1].includes('.')) {
           return "Missing '.' symbol after '@'.";
@@ -97,7 +97,7 @@ class Validations {
       const domainParts = parts[1].split('.');
       
       if (domainParts[0].length < 3) {
-          return "The part after '@' and before '.' should have at least 4 characters.";
+          return "The part after '@' and before '.' should have at least 3 characters.";
       }
       
       if (domainParts[1].length < 2) {

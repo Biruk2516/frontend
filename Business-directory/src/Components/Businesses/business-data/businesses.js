@@ -30,56 +30,56 @@ const businesses = [
     {
       name: 'Central Perk',
       description: 'Best coffee in town.',
-      image: central,
+      image1: central,
       link: 'https://coffeecorner.com',
       category:'restaurant'
     },
     {
       name: 'Burger & Pizza',
       description: 'The Best Pizza and Burger house in town.',
-      image: food,
+      image1: food,
       link: 'https://techhub.com',
       category:'restaurant'
     },
     {
       name: 'Vehicle',
-      description: 'We are the best vehicle sales company in the town',
-      image:car,
+      description: 'The best vehicle sales company in the town',
+      image1:car,
       link: 'https://greengrocer.com',
       category:'cars'
     },
     {
       name:'Computers',
       description:'best computer sales in the city',
-      image:computer,
+      image1:computer,
       link: 'https://www.computer.com',
       category:'technology'
     },
     {
       name: 'Car Business 1',
       description: 'Car repair and service in Addis',
-      image: car1,
+      image1: car1,
       link: 'https://www.carrepair.com',
       category:'cars'
     },
     {
       name: 'Car Business 2',
       description: 'Brand new Car sales in Addis',
-      image: car2,
+      image1: car2,
       link: 'https://www.carrepair.com',
       category:'cars'
     },
     {
       name: 'Car Business 3',
       description: 'Car repair and sales in Addis',
-      image: car3,
+      image1: car3,
       link: 'https://www.carrepair.com',
       category:'cars'
     },
     {
       name: 'Game Business 1',
       description: 'The Best Game house in Addis.',
-      image: game1,
+      image1: game1,
       link: 'https://www.game.com',
       category:'games'
     }
@@ -87,133 +87,133 @@ const businesses = [
     {
       name: 'Game Business 2',
       description: 'The Best Game equipment sales place in Addis.',
-      image: game2,
+      image1: game2,
       link: 'https://www.game.com',
       category:'games'
     },
     {
       name: 'Game Business 3',
       description: 'The Best Game house in Addis.',
-      image: game3,
+      image1: game3,
       link: 'https://www.game.com',
       category:'games'
     },
     {
       name: 'Game Business 4',
       description: 'The Best Game equipment sales place in Addis.',
-      image: game4,
+      image1: game4,
       link: 'https://www.game.com',
       category:'games'
     },
     {
       name: 'Hospital 1',
       description: ' Medical treatment,sergeries and others...',
-      image:hospital1,
+      image1:hospital1,
       link: 'https://www.hospitals.com',
       category:'hospitals'
     },
     {
       name: 'Hospital 2',
       description: ' Medical treatment,sergeries and others...',
-      image:hospital2,
+      image1:hospital2,
       link: 'https://www.hospitals.com',
       category:'hospitals'
     },
     {
       name: 'Hospital 3',
       description: ' Medical treatment,sergeries and others...',
-      image:hospital3,
+      image1:hospital3,
       link: 'https://www.hospitals.com',
       category:'hospitals'
     },
     {
       name:'Market 1',
       description:'A great market place in the city',
-      image:market1,
+      image1:market1,
       link: 'https://www.computer.com',
       category:'markets'
     },
     {
       name:'Market 2',
       description:'A great market place in the city',
-      image:market2,
+      image1:market2,
       link: 'https://www.computer.com',
       category:'markets'
     },
     {
       name:'Market 3',
       description:'A great market place in the city',
-      image:market3,
+      image1:market3,
       link: 'https://www.computer.com',
       category:'markets'
     },
     {
       name: 'Pharmacy 1',
       description: 'Medical drugs and clinic related equipments ...',
-      image: pharmacy1,
+      image1: pharmacy1,
       link: 'https://coffeecorner.com',
       category:'pharmacy'
     },
     {
       name: 'Pharmacy 2',
       description: 'Medical drugs and clinic related equipments ...',
-      image: pharmacy2,
+      image1: pharmacy2,
       link: 'https://coffeecorner.com',
       category:'pharmacy'
     },
     {
       name: 'Pharmacy 3',
       description: 'Medical drugs and clinic related equipments ...',
-      image: pharmacy3,
+      image1: pharmacy3,
       link: 'https://coffeecorner.com',
       category:'pharmacy'
     },
     {
       name: 'Real Estate 1',
       description: 'Great real estates with appropriate prices...',
-      image: realestate1,
+      image1: realestate1,
       link: 'https://techhub.com',
       category:'real-estate'
     },
     {
       name: 'Real Estate 2',
       description: 'Great real estates with appropriate prices...',
-      image: realestate2,
+      image1: realestate2,
       link: 'https://techhub.com',
       category:'real-estate'
     },
     {
       name: 'Real Estate 3',
       description: 'Great real estates with appropriate prices...',
-      image: realestate3,
+      image1: realestate3,
       link: 'https://techhub.com',
       category:'real-estate'
     },
     {
       name:'tech Business 1',
       description:'best computer sales in the city',
-      image:tech1,
+      image1:tech1,
       link: 'https://www.computer.com',
       category:'technology'
     },
     {
       name:'tech Business 2',
       description:'best computer sales in the city',
-      image:tech2,
+      image1:tech2,
       link: 'https://www.computer.com',
       category:'technology'
     },
     {
       name:'tech Business 3',
       description:'best computer sales in the city',
-      image:tech3,
+      image1:tech3,
       link: 'https://www.computer.com',
       category:'technology'
     },
     {
       name: 'Game Business 4',
       description: 'The Best Game equipment sales place in Addis.',
-      image: game4,
+      image1: game4,
       link: 'https://www.game.com',
       category:'games'
     },
